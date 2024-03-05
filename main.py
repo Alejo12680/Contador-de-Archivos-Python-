@@ -17,7 +17,7 @@ def contar_archivos_en_carpeta(carpeta):
 def main():
     carpeta = rutaCarpeta
     total_archivos, total_subcarpetas = contar_archivos_en_carpeta(carpeta)
-    ruta_txt = os.path.abspath(os.path.join(os.getcwd(), "../", "../", "total_archivos.txt"))
+    ruta_txt = os.path.abspath(os.path.join(os.getcwd(), "../", "../", "Contador.txt"))
     with open(ruta_txt, "w") as archivo_txt:
         archivo_txt.write(f"El total de Archivos: {total_archivos}, El total de Subcarpetas: {total_subcarpetas}")
 
