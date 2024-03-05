@@ -2,7 +2,7 @@
 
 import os
 
-rutaCarpeta = 'C:/Users/ALEJANDRO/Desktop/AppContadorCarpeta/CarpetaArchivos'
+rutaCarpeta = 'C:/Users/ALEJANDRO/Desktop/AppContadorCarpeta/pythonContadorCarpeta/CarpetaArchivos'
 
 
 def contar_archivos_en_carpeta(carpeta):
