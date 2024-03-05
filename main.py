@@ -7,17 +7,19 @@ rutaCarpeta = 'C:/Users/ALEJANDRO/Desktop/AppContadorCarpeta/pythonContadorCarpe
 
 def contar_archivos_en_carpeta(carpeta):
     total_archivos = 0
+    total_subcarpetas = 0
     for ruta, carpetas, archivos in os.walk(carpeta):
         total_archivos += len(archivos)
-    return total_archivos
+        total_subcarpetas += len(carpetas)
+    return total_archivos, total_subcarpetas
 
 
 def main():
     carpeta = rutaCarpeta
-    total_archivos = contar_archivos_en_carpeta(carpeta)
+    total_archivos, total_subcarpetas = contar_archivos_en_carpeta(carpeta)
     ruta_txt = os.path.abspath(os.path.join(os.getcwd(), "../", "../", "total_archivos.txt"))
     with open(ruta_txt, "w") as archivo_txt:
-        archivo_txt.write(f"El total de archivos {total_archivos}")
+        archivo_txt.write(f"El total de Archivos: {total_archivos}, El total de Subcarpetas: {total_subcarpetas}")
 
 
 if __name__ == "__main__":
